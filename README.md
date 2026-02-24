@@ -1,5 +1,7 @@
 ### README – Replication Scripts for “EarlyStopping: Implicit Regularization for Iterative Learning Procedures in Python”, https://arxiv.org/abs/2503.16753
 
+The full code is found here: https://github.com/EarlyStop/EarlyStopping/tree/main
+
 This folder contains one script per figure (and one for Table 1) from the paper.
 Running the ```main_replication.py``` script will reproduce all figures exactly as they appear in the manuscript except for the figures associated with the regression tree results, which take longer to run and are therefore separated out into their own scripts.
 
