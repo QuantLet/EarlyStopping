@@ -24,7 +24,7 @@ Running the ```main_replication.py``` script will reproduce all figures exactly 
 5. **`Landweber_Replication.py`**
      • Produces the efficiency curves in **Figure 3 (a) & (b)** (Landweber iteration).
 
-6. **`ConjugateGradient_Replication.py`**
+6. **`ConjugateGradients_Replication.py`**
      • Recreates **Figure 4 (a) & (b)** using **Conjugate Gradient** regularisation.
 
 7. **`L2Boost_signals.py`**
@@ -67,13 +67,26 @@ Running the ```main_replication.py``` script will reproduce all figures exactly 
 
 ---
 
+#### Setup
+
+Create a virtual environment and install the required packages from the repository root:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+The dependency `EarlyStoppingPy==0.0.4` provides the imported `EarlyStopping` package used by the replication scripts.
+
 #### How to run
 
 From the repository root:
 
 ```bash
-cd simulations   # Step into the simulations folder so that the base path is correct.
-python {insert_script_name}.py   # e.g. python RegressionTree_additive_plots.py
+python simulations/main_replication.py --dry-run
+python simulations/{insert_script_name}.py   # e.g. python simulations/RegressionTree_additive_plots.py
 ```
 
 Each script saves its output figure(s) and prints any key numerical values to the console.

@@ -8,6 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import EarlyStopping as es
 from scipy.fft import fft
+from _paths import output_path
 
 np.random.seed(21)
 
@@ -142,7 +143,7 @@ plt.grid(True)
 
 # Save the figure
 plt.tight_layout()
-plt.savefig(f"signal_estimation_comparison_fft_{signal_type}.png", dpi=300, bbox_inches="tight")
+plt.savefig(output_path(f"signal_estimation_comparison_fft_{signal_type}.png"), dpi=300, bbox_inches="tight")
 plt.show()
 
 # Visualization of Minimum Risk Estimates
@@ -172,5 +173,5 @@ plt.grid(True)
 
 # Save the figure
 plt.tight_layout()
-plt.savefig(f"signal_estimation_comparison_{signal_type}.png", dpi=300, bbox_inches="tight")
+plt.savefig(output_path(f"signal_estimation_comparison_{signal_type}.png"), dpi=300, bbox_inches="tight")
 plt.show()

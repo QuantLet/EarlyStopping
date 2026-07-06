@@ -8,6 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import EarlyStopping as es
 import os
+from _paths import SIMULATION_DIR
 
 np.random.seed(21)
 
@@ -128,6 +129,6 @@ def create_custom_boxplot(data, labels, y_lim_lower, y_lim_upper, fig_dir, name)
 # Labels for the boxplot
 labels = ["supersmooth", "smooth", "rough", "supersmooth", "smooth", "rough"]
 
-fig_dir = ""
+fig_dir = SIMULATION_DIR
 
 create_custom_boxplot(data, labels, y_lim_lower=0, y_lim_upper=1.3, fig_dir=fig_dir, name="efficiency_SVD")

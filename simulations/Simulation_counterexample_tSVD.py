@@ -2,6 +2,7 @@ import numpy as np
 import importlib
 import EarlyStopping as es
 import matplotlib.pyplot as plt
+from _paths import output_path
 
 plt.rc("axes", titlesize=20)
 plt.rc("axes", labelsize=15)
@@ -53,7 +54,7 @@ ax.set_ylim([0, 0.5])
 ax.grid(True)
 ax.tick_params(axis="y", length=0)
 plt.tight_layout()
-plt.savefig("tSVD_strong_quantities_plot.png", dpi=300, bbox_inches="tight")
+plt.savefig(output_path("tSVD_strong_quantities_plot.png"), dpi=300, bbox_inches="tight")
 
 # Create separate figure for Weak Quantities
 fig, ax = plt.subplots(figsize=(10, 6))
@@ -72,6 +73,6 @@ ax.set_ylim([0, 0.5])
 ax.grid(True)
 ax.tick_params(axis="y", length=0)
 plt.tight_layout()
-plt.savefig("tSVD_weak_quantities_plot.png", dpi=300, bbox_inches="tight")
+plt.savefig(output_path("tSVD_weak_quantities_plot.png"), dpi=300, bbox_inches="tight")
 
 plt.show()

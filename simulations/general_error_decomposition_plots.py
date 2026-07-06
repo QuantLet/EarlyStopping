@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import os
+from _paths import SIMULATION_DIR
 
 # Ensure consistent style
 plt.rc("axes", titlesize=20)
@@ -63,7 +64,7 @@ ax_2.set_xlabel("Iteration $m$")  # Set x-axis label
 ax_2.set_ylabel("")  # Remove y-axis label
 
 # Save figure
-fig_dir = "."  # Change to desired directory
+fig_dir = SIMULATION_DIR
 fig_1.savefig(os.path.join(fig_dir, "GeneralBiasVarianceDecomposition_1.png"), bbox_inches="tight", dpi=300)
 fig_2.savefig(os.path.join(fig_dir, "GeneralBiasVarianceDecomposition_2.png"), bbox_inches="tight", dpi=300)
 

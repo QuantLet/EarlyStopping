@@ -4,6 +4,7 @@ import EarlyStopping as es
 import matplotlib.pyplot as plt
 import os
 import seaborn as sns
+from _paths import output_path
 
 # Ensure consistent style - using the style from error_decomposition_plots.py
 plt.rc("axes", titlesize=20)
@@ -34,7 +35,7 @@ cbar.set_label(" ", fontsize=14)
 ax.set_xlabel("")
 ax.set_ylabel("")
 plt.tight_layout()
-plt.savefig("design_matrix_heatmap.png", dpi=300, bbox_inches="tight")
+plt.savefig(output_path("design_matrix_heatmap.png"), dpi=300, bbox_inches="tight")
 
 # Create and save true signal as a line plot
 fig, ax = plt.subplots(figsize=(10, 6))
@@ -45,7 +46,7 @@ ax.set_xlabel("Iteration $m$")
 ax.set_ylabel("")
 ax.tick_params(axis="y", length=0)
 plt.tight_layout()
-plt.savefig("true_signal_lineplot.png", dpi=300, bbox_inches="tight")
+plt.savefig(output_path("true_signal_lineplot.png"), dpi=300, bbox_inches="tight")
 
 # Show the original plots
 plt.show()

@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import EarlyStopping as es
 import pandas as pd
 import os
+from _paths import SIMULATION_DIR
 
 
 plt.rc("axes", titlesize=20)
@@ -40,7 +41,7 @@ ax.set_xlim([0, 9999])
 plt.text(2, plt.ylim()[0] - 0.1, " ", ha="center", va="top", fontsize=14)
 plt.text(5, plt.ylim()[0] - 0.1, " ", ha="center", va="top", fontsize=14)
 
-fig_dir = ""
+fig_dir = SIMULATION_DIR
 plt.tight_layout()
 plt.savefig(os.path.join(fig_dir, f"signals_new.png"), bbox_inches="tight", dpi=300)
 plt.show()

@@ -3,6 +3,7 @@ import importlib
 import EarlyStopping as es
 import matplotlib.pyplot as plt
 import os
+from _paths import SIMULATION_DIR
 
 importlib.reload(es)
 
@@ -129,7 +130,7 @@ efficiency_to_plot = [
 ]
 
 labels = ["supersmooth", "smooth", "rough", "supersmooth", "smooth", "rough"]
-fig_dir = ""
+fig_dir = SIMULATION_DIR
 
 create_custom_boxplot(
     efficiency_to_plot, labels, y_lim_lower=0, y_lim_upper=1.3, fig_dir=fig_dir, name="cg_efficiency"

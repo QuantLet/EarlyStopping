@@ -12,6 +12,7 @@ import importlib
 import matplotlib.pyplot as plt
 import RegressionTree_additive_generation as data_generation
 from joblib import Parallel, delayed
+from _paths import SIMULATION_DIR
 
 # Reload modules to ensure changes are applied
 importlib.reload(data_generation)
@@ -216,7 +217,7 @@ def main():
     results = np.round(results, 6)
 
     # Automatically determine the directory for saving plots (same as script location)
-    fig_dir = os.path.dirname(os.path.abspath(__file__))
+    fig_dir = SIMULATION_DIR
 
     dgps = ["additive smooth", "additive step", "additive linear", "additive hills"]
 

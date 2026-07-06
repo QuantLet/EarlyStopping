@@ -3,6 +3,7 @@ import importlib
 import EarlyStopping as es
 import matplotlib.pyplot as plt
 import os
+from _paths import SIMULATION_DIR
 
 importlib.reload(es)
 
@@ -164,7 +165,7 @@ labels_efficiency = ["Landweber", "CG", "SVD", "Landweber", "CG", "SVD"]
 # Labels for the stopping times boxplot
 labels_stopping = ["Landweber", "CG", "SVD"]
 
-fig_dir = ""
+fig_dir = SIMULATION_DIR
 
 # Create comparison boxplot for efficiency
 create_custom_boxplot(

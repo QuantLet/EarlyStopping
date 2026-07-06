@@ -8,6 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import EarlyStopping as es
 import os
+from _paths import SIMULATION_DIR
 
 np.random.seed(21)
 
@@ -158,7 +159,7 @@ data = [
 ]
 
 labels = ["beta_3", "beta_2", "beta_1", "beta_15", "beta_60", "beta_90"]
-fig_dir = ""
+fig_dir = SIMULATION_DIR
 create_custom_boxplot(
     data, labels, y_lim_lower=0.1, y_lim_upper=1.1, fig_dir=fig_dir, name="L2_boost_relative_efficiencies_discrepancy"
 )
@@ -182,7 +183,7 @@ data = [
 ]
 
 labels = ["beta_3", "beta_2", "beta_1", "beta_15", "beta_60", "beta_90"]
-fig_dir = ""
+fig_dir = SIMULATION_DIR
 create_custom_boxplot(
     data,
     labels,
@@ -281,7 +282,7 @@ data_two_step_residual_ratio_stop = [
 
 
 labels = ["beta_3", "beta_2", "beta_1", "beta_15", "beta_60", "beta_90"]
-fig_dir = ""
+fig_dir = SIMULATION_DIR
 # create_custom_boxplot(data_aic, labels, y_lim_lower = 0, y_lim_upper=1.1, fig_dir=fig_dir, name='L2_boost_relative_efficiencies_aic')
 create_custom_boxplot(
     data_two_step_discrepancy_stop,

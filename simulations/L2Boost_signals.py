@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from _paths import output_path
 
 np.random.seed(21)
 
@@ -60,7 +61,7 @@ plt.grid(True)
 plt.tick_params(axis="both", which="major", labelsize=14)
 # Save the figure
 plt.tight_layout()
-plt.savefig(f"boosting_signals_1.png", dpi=300, bbox_inches="tight")
+plt.savefig(output_path("boosting_signals_1.png"), dpi=300, bbox_inches="tight")
 plt.show()
 
 ############################################################
@@ -86,5 +87,5 @@ plt.grid(True)
 plt.tick_params(axis="both", which="major", labelsize=14)
 # Save the figure
 plt.tight_layout()
-plt.savefig(f"boosting_signals_2.png", dpi=300, bbox_inches="tight")
+plt.savefig(output_path("boosting_signals_2.png"), dpi=300, bbox_inches="tight")
 plt.show()

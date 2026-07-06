@@ -2,6 +2,7 @@ import numpy as np
 import importlib
 import EarlyStopping as es
 import matplotlib.pyplot as plt
+from _paths import output_path
 
 np.random.seed(21)
 
@@ -62,7 +63,7 @@ ax.grid(True)
 
 plt.tight_layout()
 plt.tick_params(axis="both", which="major", labelsize=14)
-plt.savefig("demonstration_strong_quantities_plot.png", dpi=300, bbox_inches="tight")
+plt.savefig(output_path("demonstration_strong_quantities_plot.png"), dpi=300, bbox_inches="tight")
 
 plt.show()
 
@@ -83,5 +84,5 @@ ax.set_ylim([0, 1])
 ax.grid(True)
 plt.tight_layout()
 plt.tick_params(axis="both", which="major", labelsize=14)
-plt.savefig("demonstration_weak_quantities_plot.png", dpi=300, bbox_inches="tight")
+plt.savefig(output_path("demonstration_weak_quantities_plot.png"), dpi=300, bbox_inches="tight")
 plt.show()

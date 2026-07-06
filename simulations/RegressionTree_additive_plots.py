@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 import RegressionTree_additive_generation as data_gen
+from _paths import SIMULATION_DIR
 
 # Ensure consistent style
 plt.rc('axes', titlesize=20)
@@ -75,7 +76,7 @@ ax.plot(x, y4, color="black", linewidth=1.5, label='Function 4')
 ax.grid(True)
 
 # Save figure
-fig_dir = "."
+fig_dir = SIMULATION_DIR
 fig.savefig(os.path.join(fig_dir, 'piecewise_constant_functions_esfiep.png'), bbox_inches="tight", dpi=300)
 plt.show()
 
@@ -97,7 +98,7 @@ ax.plot(x, y4_lin, color="black", linewidth=1.5, label='Function 4')
 ax.grid(True)
 
 # Save figure
-fig_dir = "."
+fig_dir = SIMULATION_DIR
 fig.savefig(os.path.join(fig_dir, 'piecewise_linear_functions_esfiep.png'), bbox_inches="tight", dpi=300)
 plt.show()
 
@@ -120,7 +121,7 @@ ax.plot(x, f4, color="black", linewidth=1.5, label='Function 4')
 ax.grid(True)
 
 # Save figure
-fig_dir = "."
+fig_dir = SIMULATION_DIR
 fig.savefig(os.path.join(fig_dir, 'hills_functions_esfiep.png'), bbox_inches="tight", dpi=300)
 plt.show()
 
@@ -155,6 +156,6 @@ ax.plot(x, f4_smooth, color="black", linewidth=1.5, label='Function 4')
 ax.grid(True)
 
 # Save figure
-fig_dir = "."
+fig_dir = SIMULATION_DIR
 fig.savefig(os.path.join(fig_dir, 'smooth_functions_esfiep.png'), bbox_inches="tight", dpi=300)
 plt.show()
